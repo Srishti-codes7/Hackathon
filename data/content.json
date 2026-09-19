@@ -1,0 +1,182 @@
+{
+  "topics": [
+    {
+      "id": "python_basics",
+      "name": "Python Basics",
+      "difficulty": 1,
+      "prerequisites": []
+    },
+    {
+      "id": "variables",
+      "name": "Variables and Data Types",
+      "difficulty": 1,
+      "prerequisites": ["python_basics"]
+    },
+    {
+      "id": "conditionals",
+      "name": "Conditionals",
+      "difficulty": 2,
+      "prerequisites": ["variables"]
+    },
+    {
+      "id": "loops",
+      "name": "Loops",
+      "difficulty": 2,
+      "prerequisites": ["variables", "conditionals"]
+    },
+    {
+      "id": "functions",
+      "name": "Functions",
+      "difficulty": 3,
+      "prerequisites": ["loops"]
+    },
+    {
+      "id": "lists",
+      "name": "Lists",
+      "difficulty": 2,
+      "prerequisites": ["variables"]
+    },
+    {
+      "id": "dictionaries",
+      "name": "Dictionaries",
+      "difficulty": 3,
+      "prerequisites": ["lists"]
+    },
+    {
+      "id": "oop",
+      "name": "Object Oriented Programming",
+      "difficulty": 4,
+      "prerequisites": ["functions", "dictionaries"]
+    }
+  ],
+  "items": [
+    {
+      "id": "vid_python_intro",
+      "topic_id": "python_basics",
+      "type": "video",
+      "title": "Introduction to Python",
+      "difficulty": 1,
+      "duration_seconds": 300
+    },
+    {
+      "id": "quiz_python_intro",
+      "topic_id": "python_basics",
+      "type": "quiz",
+      "title": "Python Basics Quiz",
+      "difficulty": 1,
+      "duration_seconds": 180
+    },
+    {
+      "id": "vid_variables",
+      "topic_id": "variables",
+      "type": "video",
+      "title": "Variables and Data Types",
+      "difficulty": 1,
+      "duration_seconds": 360
+    },
+    {
+      "id": "quiz_variables",
+      "topic_id": "variables",
+      "type": "quiz",
+      "title": "Variables Quiz",
+      "difficulty": 2,
+      "duration_seconds": 180
+    },
+    {
+      "id": "vid_conditionals",
+      "topic_id": "conditionals",
+      "type": "video",
+      "title": "Conditional Statements",
+      "difficulty": 2,
+      "duration_seconds": 420
+    },
+    {
+      "id": "quiz_conditionals",
+      "topic_id": "conditionals",
+      "type": "quiz",
+      "title": "Conditionals Quiz",
+      "difficulty": 2,
+      "duration_seconds": 180
+    },
+    {
+      "id": "vid_loops",
+      "topic_id": "loops",
+      "type": "video",
+      "title": "Loops in Python",
+      "difficulty": 2,
+      "duration_seconds": 480
+    },
+    {
+      "id": "quiz_loops",
+      "topic_id": "loops",
+      "type": "quiz",
+      "title": "Loops Quiz",
+      "difficulty": 3,
+      "duration_seconds": 240
+    },
+    {
+      "id": "vid_functions",
+      "topic_id": "functions",
+      "type": "video",
+      "title": "Python Functions",
+      "difficulty": 3,
+      "duration_seconds": 500
+    },
+    {
+      "id": "quiz_functions",
+      "topic_id": "functions",
+      "type": "quiz",
+      "title": "Functions Quiz",
+      "difficulty": 3,
+      "duration_seconds": 240
+    },
+    {
+      "id": "vid_lists",
+      "topic_id": "lists",
+      "type": "video",
+      "title": "Python Lists",
+      "difficulty": 2,
+      "duration_seconds": 400
+    },
+    {
+      "id": "quiz_lists",
+      "topic_id": "lists",
+      "type": "quiz",
+      "title": "Lists Quiz",
+      "difficulty": 2,
+      "duration_seconds": 180
+    },
+    {
+      "id": "vid_dictionaries",
+      "topic_id": "dictionaries",
+      "type": "video",
+      "title": "Python Dictionaries",
+      "difficulty": 3,
+      "duration_seconds": 450
+    },
+    {
+      "id": "quiz_dictionaries",
+      "topic_id": "dictionaries",
+      "type": "quiz",
+      "title": "Dictionaries Quiz",
+      "difficulty": 3,
+      "duration_seconds": 220
+    },
+    {
+      "id": "vid_oop",
+      "topic_id": "oop",
+      "type": "video",
+      "title": "Object Oriented Programming",
+      "difficulty": 4,
+      "duration_seconds": 600
+    },
+    {
+      "id": "quiz_oop",
+      "topic_id": "oop",
+      "type": "quiz",
+      "title": "OOP Assessment",
+      "difficulty": 4,
+      "duration_seconds": 300
+    }
+  ]
+}
