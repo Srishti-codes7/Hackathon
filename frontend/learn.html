@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnFlow — Adaptive Lesson</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="learn">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">L</span>
+        <span>LearnFlow</span>
+      </a>
+      <nav class="nav">
+        <a class="nav-item" href="index.html"><span>⌂</span> Dashboard</a>
+        <a class="nav-item active" href="learn.html?topic=binary-search"><span>▶</span> Continue Learning</a>
+        <a class="nav-item" href="index.html#knowledge"><span>◈</span> Knowledge Map</a>
+        <a class="nav-item" href="index.html#activity"><span>◷</span> Activity</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="ai-card">
+          <span class="ai-spark">✦</span>
+          <strong>Adaptive AI</strong>
+          <p>Signals are collected as you learn.</p>
+        </div>
+        <div class="sidebar-user">
+          <div class="avatar">AR</div>
+          <div><strong>Alex Rivera</strong><small>Computer Science</small></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumb"><a href="index.html">Dashboard</a><span>/</span> Algorithms <span>/</span> Binary Search</div>
+        <div class="top-actions">
+          <span class="state-chip"><i></i> Adaptive mode</span>
+          <div class="top-avatar">AR</div>
+        </div>
+      </header>
+
+      <section class="learn-page">
+        <div class="lesson-top">
+          <div>
+            <div class="tag-row"><span class="tag purple-tag">Algorithms</span><span class="difficulty">Intermediate</span></div>
+            <h1>Binary Search: Finding What You Need Faster</h1>
+            <p class="muted">A prerequisite-linked lesson selected from your current learner state.</p>
+          </div>
+          <div class="lesson-progress-wrap">
+            <div><span>Lesson progress</span><strong id="lessonPercent">35%</strong></div>
+            <div class="progress-bar"><span id="lessonProgress" style="width:35%"></span></div>
+          </div>
+        </div>
+
+        <div class="learning-layout">
+          <article class="lesson-card">
+            <div class="video-stage" id="videoStage">
+              <div class="video-grid"></div>
+              <div class="video-content">
+                <span class="video-label">INTERACTIVE EXPLAINER</span>
+                <h2>Binary Search in 60 Seconds</h2>
+                <p>Cut the search space in half after every comparison.</p>
+                <button class="play-button" id="playButton" aria-label="Play lesson">▶</button>
+              </div>
+              <div class="video-controls">
+                <span id="videoTime">02:18 / 06:40</span>
+                <div class="fake-video-progress"><span id="videoProgress"></span></div>
+                <button id="pauseButton" title="Pause/play">Ⅱ</button>
+                <button id="rewatchButton" title="Rewatch">↻</button>
+              </div>
+            </div>
+
+            <div class="interaction-strip">
+              <div><span class="signal-icon">◷</span><strong id="timeSpent">00:00</strong><small>time spent</small></div>
+              <div><span class="signal-icon">↻</span><strong id="rewatchCount">0</strong><small>rewatches</small></div>
+              <div><span class="signal-icon">Ⅱ</span><strong id="pauseCount">0</strong><small>pauses</small></div>
+              <div><span class="signal-icon">⚡</span><strong>Medium</strong><small>current difficulty</small></div>
+            </div>
+
+            <div class="lesson-content">
+              <h2>How binary search works</h2>
+              <p>Binary search finds an item in a <strong>sorted</strong> collection by repeatedly checking the middle element and discarding the half that cannot contain the answer.</p>
+              <div class="concept-grid">
+                <div class="concept"><span>01</span><strong>Pick the middle</strong><p>Compare the target with the middle value.</p></div>
+                <div class="concept"><span>02</span><strong>Discard a half</strong><p>Keep only the side that can contain the target.</p></div>
+                <div class="concept"><span>03</span><strong>Repeat</strong><p>Continue until the target is found or the range is empty.</p></div>
+              </div>
+
+              <div class="code-card">
+                <div class="code-head"><span>Python</span><span>O(log n)</span></div>
+                <pre><code>low, high = 0, len(items) - 1
+
+while low &lt;= high:
+    mid = (low + high) // 2
+
+    if items[mid] == target:
+        return mid
+    elif items[mid] &lt; target:
+        low = mid + 1
+    else:
+        high = mid - 1
+
+return -1</code></pre>
+              </div>
+
+              <div class="hint-card">
+                <span>💡</span>
+                <div><strong>Personalized hint</strong><p>You recently missed questions involving inclusive vs. exclusive search bounds. Pay attention to <code>low &lt;= high</code>.</p></div>
+              </div>
+            </div>
+          </article>
+
+          <aside class="quiz-card">
+            <div class="quiz-header">
+              <span class="section-kicker">CHECKPOINT 1 OF 3</span>
+              <span class="quiz-score" id="quizScore">0 / 1</span>
+            </div>
+            <h2>Quick check</h2>
+            <p class="quiz-question">Which condition makes binary search applicable to a list?</p>
+            <div class="options" id="quizOptions">
+              <button class="option" data-correct="false"><span>A</span> The list must be randomly ordered.</button>
+              <button class="option" data-correct="true"><span>B</span> The list must be sorted by the search key.</button>
+              <button class="option" data-correct="false"><span>C</span> Every value must be unique.</button>
+              <button class="option" data-correct="false"><span>D</span> The list must contain exactly 100 items.</button>
+            </div>
+            <div class="feedback" id="feedback"></div>
+            <button class="btn btn-dark full" id="nextQuestion" disabled>Submit answer</button>
+
+            <div class="difficulty-adjust">
+              <div>
+                <span class="section-kicker">LIVE ADAPTATION</span>
+                <strong id="adaptationTitle">Difficulty is being monitored</strong>
+              </div>
+              <p id="adaptationText">Answer speed and accuracy will influence the next item.</p>
+              <div class="difficulty-meter">
+                <span class="active"></span><span class="active"></span><span></span>
+              </div>
+              <small>Easy &nbsp; <b>Intermediate</b> &nbsp; Advanced</small>
+            </div>
+
+            <div class="signals-card">
+              <strong>Signals collected</strong>
+              <span>✓ Accuracy</span><span>✓ Time-to-answer</span><span>✓ Pauses</span><span>✓ Rewatches</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>

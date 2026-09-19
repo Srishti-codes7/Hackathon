@@ -1,1 +1,232 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnFlow — Adaptive Learning Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="dashboard">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">L</span>
+        <span>LearnFlow</span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav-item active" href="index.html"><span>⌂</span> Dashboard</a>
+        <a class="nav-item" href="learn.html?topic=binary-search"><span>▶</span> Continue Learning</a>
+        <a class="nav-item" href="#knowledge"><span>◈</span> Knowledge Map</a>
+        <a class="nav-item" href="#activity"><span>◷</span> Activity</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="ai-card">
+          <span class="ai-spark">✦</span>
+          <strong>Adaptive AI</strong>
+          <p>Your path changes as you learn.</p>
+        </div>
+        <div class="sidebar-user">
+          <div class="avatar">AR</div>
+          <div>
+            <strong>Alex Rivera</strong>
+            <small>Computer Science</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> Learner dashboard</div>
+        <div class="top-actions">
+          <button class="icon-btn" title="Notifications">♢<span class="notification-dot"></span></button>
+          <div class="top-avatar">AR</div>
+        </div>
+      </header>
+
+      <section class="page-content">
+        <div class="welcome-row">
+          <div>
+            <p class="eyebrow">SATURDAY, SEPTEMBER 19</p>
+            <h1>Good afternoon, Alex <span class="wave">👋</span></h1>
+            <p class="muted">Your learning path has been updated based on your latest activity.</p>
+          </div>
+          <a class="btn btn-primary" href="learn.html?topic=binary-search">Continue learning <span>→</span></a>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-icon purple">◉</div>
+            <div>
+              <span class="stat-label">Overall mastery</span>
+              <strong>72%</strong>
+              <small class="positive">↑ 8% this week</small>
+            </div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon orange">♨</div>
+            <div>
+              <span class="stat-label">Learning streak</span>
+              <strong>7 days</strong>
+              <small>Best: 12 days</small>
+            </div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon blue">◷</div>
+            <div>
+              <span class="stat-label">Study time</span>
+              <strong>4h 32m</strong>
+              <small>↑ 24m this week</small>
+            </div>
+          </article>
+          <article class="stat-card">
+            <div class="stat-icon green">✓</div>
+            <div>
+              <span class="stat-label">Items completed</span>
+              <strong>38</strong>
+              <small>6 this week</small>
+            </div>
+          </article>
+        </div>
+
+        <div class="dashboard-grid">
+          <section class="panel recommendation-panel">
+            <div class="panel-heading">
+              <div>
+                <span class="section-kicker">ADAPTIVE RECOMMENDATION</span>
+                <h2>Recommended next</h2>
+              </div>
+              <span class="ai-badge">✦ AI selected</span>
+            </div>
+
+            <div class="recommendation">
+              <div class="recommendation-visual">
+                <div class="play-circle">▶</div>
+                <span>12 min lesson</span>
+              </div>
+              <div class="recommendation-body">
+                <div class="tag-row"><span class="tag purple-tag">Algorithms</span><span class="difficulty">Intermediate</span></div>
+                <h3>Binary Search: Finding What You Need Faster</h3>
+                <p>Build on your strong array skills and strengthen your search-algorithm mastery.</p>
+                <div class="recommendation-meta">
+                  <span>Prerequisite <b>Arrays ✓</b></span>
+                  <span>Mastery <b>46%</b></span>
+                </div>
+                <a class="btn btn-dark" href="learn.html?topic=binary-search">Start recommended lesson →</a>
+              </div>
+            </div>
+
+            <div class="why-recommended">
+              <div class="why-icon">✦</div>
+              <div>
+                <strong>Why this was recommended</strong>
+                <p>Your last 3 array quizzes were above 80%. Binary Search is the next prerequisite-linked concept, while your recent search questions show room to improve.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel progress-panel">
+            <div class="panel-heading">
+              <div>
+                <span class="section-kicker">YOUR PATH</span>
+                <h2>Learning progress</h2>
+              </div>
+              <span class="muted small">6 / 10 modules</span>
+            </div>
+            <div class="path-list">
+              <div class="path-item completed">
+                <span class="path-dot">✓</span>
+                <div><strong>Arrays & Complexity</strong><small>Mastered · 92%</small></div>
+                <span class="path-status">Done</span>
+              </div>
+              <div class="path-item current">
+                <span class="path-dot">2</span>
+                <div><strong>Binary Search</strong><small>In progress · 46%</small></div>
+                <span class="path-status">Now</span>
+              </div>
+              <div class="path-item">
+                <span class="path-dot">3</span>
+                <div><strong>Sorting Algorithms</strong><small>Locked by mastery</small></div>
+                <span class="path-status">Next</span>
+              </div>
+              <div class="path-item">
+                <span class="path-dot">4</span>
+                <div><strong>Graphs</strong><small>Upcoming</small></div>
+                <span class="path-status">Soon</span>
+              </div>
+            </div>
+            <div class="progress-bar"><span style="width: 60%"></span></div>
+          </section>
+        </div>
+
+        <div class="dashboard-grid lower">
+          <section class="panel" id="knowledge">
+            <div class="panel-heading">
+              <div>
+                <span class="section-kicker">KNOWLEDGE GRAPH</span>
+                <h2>Topic mastery</h2>
+              </div>
+              <button class="text-btn" id="resetDemo">Reset demo</button>
+            </div>
+            <div class="knowledge-map" aria-label="Topic knowledge map">
+              <div class="node mastered n1">Arrays<span>92%</span></div>
+              <div class="connector c1"></div>
+              <div class="node current n2">Binary Search<span>46%</span></div>
+              <div class="connector c2"></div>
+              <div class="node weak n3">Sorting<span>61%</span></div>
+              <div class="connector c3"></div>
+              <div class="node neutral n4">Trees<span>28%</span></div>
+              <div class="connector c4"></div>
+              <div class="node neutral n5">Graphs<span>18%</span></div>
+            </div>
+            <div class="legend">
+              <span><i class="legend-dot mastered-dot"></i> Mastered</span>
+              <span><i class="legend-dot current-dot"></i> Learning</span>
+              <span><i class="legend-dot weak-dot"></i> Needs review</span>
+            </div>
+          </section>
+
+          <section class="panel" id="activity">
+            <div class="panel-heading">
+              <div>
+                <span class="section-kicker">RECENT SIGNALS</span>
+                <h2>Activity & insights</h2>
+              </div>
+              <span class="live-pill"><i></i> Live state</span>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <span class="activity-icon green">✓</span>
+                <div><strong>Quiz completed</strong><small>Arrays · 92% score · 2m 14s</small></div>
+                <time>Today</time>
+              </div>
+              <div class="activity-item">
+                <span class="activity-icon purple">▶</span>
+                <div><strong>Lesson rewatched</strong><small>Binary Search · 2 segments</small></div>
+                <time>Today</time>
+              </div>
+              <div class="activity-item">
+                <span class="activity-icon orange">!</span>
+                <div><strong>Weakness detected</strong><small>Off-by-one errors in search bounds</small></div>
+                <time>Yesterday</time>
+              </div>
+              <div class="activity-item">
+                <span class="activity-icon blue">↗</span>
+                <div><strong>Difficulty adjusted</strong><small>Moved from easy → intermediate</small></div>
+                <time>Yesterday</time>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
