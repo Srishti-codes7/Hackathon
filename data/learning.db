@@ -1,0 +1,44 @@
+adaptive-learning-engine/
+├── README.md
+├── requirements.txt
+├── Dockerfile
+│
+├── data/
+│   ├── generate_data.py
+│   ├── content.json
+│   └── learning.db          ← generated SQLite database
+│
+├── app/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── schemas.py
+│   ├── database.py
+│   │
+│   ├── routers/
+│   │   ├── __init__.py
+│   │   ├── learners.py
+│   │   ├── recommend.py
+│   │   └── evaluate.py
+│   │
+│   └── engine/
+│       ├── __init__.py
+│       ├── knowledge_graph.py
+│       ├── learner_model.py
+│       ├── recommender.py
+│       ├── difficulty.py
+│       └── evaluation.py
+│
+├── frontend/
+│   ├── index.html
+│   ├── learn.html
+│   ├── style.css
+│   └── app.js
+│
+├── tests/
+│   ├── test_graph.py
+│   ├── test_learner_model.py
+│   └── test_recommender.py
+│
+└── docs/
+    ├── design_document.md
+    └── lms_integration_plan.md
